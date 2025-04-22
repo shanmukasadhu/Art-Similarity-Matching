@@ -50,3 +50,17 @@ with torch.no_grad():
     inner_product = image_features @ text_features.T
     print(f"Inner product shape: {inner_product.shape}")
     
+    
+# Output:
+# RN50 tokenization of 1886 → 18 86 → tensor([[49406,   272,   279,   279,   277, 49407,     0,     0,     0,     0,
+#              0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+#              0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+#              0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+#              0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+#              0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+#              0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+#              0,     0,     0,     0,     0,     0,     0]], device='mps:0')
+# Tokens shape: torch.Size([1, 77])
+# Image features shape: torch.Size([1, 1024])
+# Text features shape: torch.Size([1, 1024])
+# Inner product shape: torch.Size([1, 1])
